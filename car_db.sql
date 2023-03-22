@@ -1,0 +1,117 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 10, 2023 at 06:46 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `carshop`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `car_db`
+--
+
+CREATE TABLE `car_db` (
+  `id` int(11) NOT NULL,
+  `Brand` varchar(11) NOT NULL,
+  `Model` varchar(50) NOT NULL,
+  `Price` int(11) NOT NULL,
+  `ImageCar` varchar(300) NOT NULL,
+  `Description` varchar(400) NOT NULL,
+  `Detail` varchar(400) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `car_db`
+--
+
+INSERT INTO `car_db` (`id`, `Brand`, `Model`, `Price`, `ImageCar`, `Description`, `Detail`) VALUES
+(2, 'TOYOTA', 'SupraMK4', 40001, 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/1994_Toyota_Supra_Sport_Roof_in_Red%2C_front_left.jpg/1920px-1994_Toyota_Supra_Sport_Roof_in_Red%2C_front_left.jpg', 'If one Japanese sports car could define a decade ', 'Price: $40,000/ Engine: 3.0L Sequential Turbo Stra'),
+(3, 'TOYOTA', 'GR Supra', 53595, 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Toyota_Supra_Monrepos_2019_IMG_1898.jpg/1920px-Toyota_Supra_Monrepos_2019_IMG_1898.jpg', 'The J29/DB Toyota Supra, also known as the Toyota ', 'The J29/DB Toyota Supra, also known as the Toyota GR Supra, is the fifth generation of the Supra, a sports car produced by Toyota since 2019. The GR Supra was sold under and developed by Toyota\'s Gazoo Racing (GR) brand, in collaboration with BMW, '),
+(4, 'TOYOTA', 'Mirai', 75000, 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Toyota_Mirai_%28JPD20%29_IMG_5303.jpg/420px-Toyota_Mirai_%28JPD20%29_IMG_5303.jpg', 'The Toyota Mirai (Japanese: トヨタ・MIRAI, Hepburn: Toyota Mirai) (from mirai (未来), Japanese for \'future\') is a mid-size hydrogen fuel cell vehicle (FCV) manufactured by Toyota, and is one of the first FC', 'Power 134 kW (180 hp)/Engine \r\nMotor, Single Electric/'),
+(5, 'TOYOTA', 'Tundra', 35950, 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/2022_Toyota_Tundra_CrewMax_Limited%2C_front_6.30.22.jpg/420px-2022_Toyota_Tundra_CrewMax_Limited%2C_front_6.30.22.jpg', 'The pickup truck was officially unveiled during Motor Bella on September 21, 2021.[74] It is built on the body-on-frame GA-F platform.', 'Engine	3.4 L V35A-FTS twin-turbo V6/Transmission	10-speed AWR10L65 \"ECTi Direct Shift\" automatic/Power 437hp'),
+(6, 'BMW', 'i8', 147500, 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/2016_BMW_i8.jpg/420px-2016_BMW_i8.jpg', 'The BMW i8 is a plug-in hybrid sports car developed by BMW.', 'Engine	B38K15T0 1.5L turbocharged I3 engine gasoline/Electric motor	98 kW (131 hp)/Power output	369 hp/Transmission	Aisin F21-360 FT EOP'),
+(7, 'BMW', 'Z4 2018', 63473, 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/2019_BMW_Z4_M40i_Front.jpg/420px-2019_BMW_Z4_M40i_Front.jpg', 'The BMW Z models are a line of roadsters manufactured by German automaker BMW. The Z stands for zukunft (German for future).', 'Engine Intercooled Turbo Premium Unleaded I-6/Transmission Automatic w/OD 8 Speed/Power 255hp'),
+(8, 'BMW', 'IX3', 104900, 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/BMW_iX3_G08_IMG_5940.jpg/420px-BMW_iX3_G08_IMG_5940.jpg', 'The BMW iX3 is a battery electric compact luxury crossover SUV manufactured by BMW. It was presented at the 2018 Beijing Motor Show in April as the battery electric version of the BMW X3 (G01)', 'Electric motor	Rear motor 210 kW (280 bhp)'),
+(9, 'BMW', 'M1', 522863, 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/BMW_M1%2C_front_right_%28Brooklyn%29.jpg/420px-BMW_M1%2C_front_right_%28Brooklyn%29.jpg', 'The BMW M1 (model code E26) is a mid-engined sports car produced by German automotive manufacturer BMW from 1978 until 1981.', 'Class	Sports car /Body style	2-door coupé\r\nLayout	Mid-engine, rear-wheel-drive\r\nEngine	3.5 L M88/1 I6/Transmission	5-speed manual/Power 273 hp'),
+(10, 'BMW', '7 Series ', 90795, 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/BMW_i7_xDrive60_1X7A6425.jpg/420px-BMW_i7_xDrive60_1X7A6425.jpg', 'The G70 7 Series is offered with petrol, petrol plug-in hybrid, diesel, and battery electric powertrains, with the latter being marketed as the i7. A V12 petrol engine option is no longer offered', 'Class	Full-size luxury car (F)/\r\nBody style 4-door sedan/Engine	Petrol:3.0 L B58 I6 turbo / Power 296hp'),
+(11, 'BMW', 'M3', 76804, 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/BMW_M3_Competition_%28G80%29_IMG_4041.jpg/420px-BMW_M3_Competition_%28G80%29_IMG_4041.jpg', 'The BMW M3 is a high-performance version of the BMW 3 Series, developed by BMW\'s in-house motorsport division, BMW M GmbH. M3 models have been produced for every generation of 3 Series since the E30 M', 'FuelTypePetrol/Transmission8 Speed SportsAutomatic/Drive TypeRWD/Engine3.0TT/Power 473 hp'),
+(13, 'McLaren', 'McLaren GT', 208490, 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/2022_McLaren_GT.jpg/420px-2022_McLaren_GT.jpg', 'The McLaren GT is a sports car designed and manufactured by British automobile manufacturer McLaren Automotive.', 'Engine	4.0 L M840TE twin-turbocharged V8/\r\nPower output	620 PS (456 kW; 612 hp)/\r\nTransmission	7-speed dual-clutch'),
+(14, 'McLaren', 'Senna', 960000, 'https://www.cardataguide.com/wp-content/uploads/2019/10/McLaren-Senna.jpg', 'The McLaren Senna is a limited-production mid-engined sports car manufactured by McLaren Automotive. The car is the third addition in the McLaren Ultimate Series, joining the F1 and the P1.', 'Engine: 4.0 L M840TR twin-turbocharged V8\r\nPower: 789 bhp @ 7,250 rpm\r\nTorque: 590 lb-ft @ 5,500 rpm\r\n0-60 mph: 2.8 sec\r\n0-124 mph: 6.8 sec\r\nTop Speed: 211 mph'),
+(16, 'McLaren', 'P1', 1000000, 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/McLaren_P1.jpg/420px-McLaren_P1.jpg', 'The McLaren P1 is a limited-production mid-engine plug-in hybrid sports car produced by British automobile manufacturer McLaren Automotive. Debuted at the 2012 Paris Motor Show,', 'Engine: 3.8 L M838TQ twin-turbo V8 + electric motor\r\nPower: 986 hp\r\nTransmission	7-speed dual-clutch\r\nTorque: 774 lb/ft\r\n0-60 mph: 2.8 sec\r\n0-124 mph: 6.8 sec\r\nTop Speed: 217 mph'),
+(17, 'McLaren', '720S Spider', 315000, 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/2018_McLaren_720S_V8_S-A_4.0.jpg/420px-2018_McLaren_720S_V8_S-A_4.0.jpg', 'The McLaren 720S is a sports car designed and manufactured by British automobile manufacturer McLaren Automotive. It is the second all-new car in the McLaren Super Series, replacing the 650S beginning', 'Engine: 4.0 L twin-turbocharged V8\r\nPower: 710 bhp @ 7,500 rpm\r\nTransmission	7-speed Graziano dual-clutch\r\nTorque: 568 lb-ft @ 6,500 rpm\r\n0-60 mph: 2.9 sec\r\n0-124 mph: 7.9 sec\r\nTop Speed: 212 mph'),
+(18, 'Mercedes', 'AMG ONE', 2800000, 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Mercedes-AMG_One_at_the_2022_Goodwood_Festival_of_Speed.jpg/420px-Mercedes-AMG_One_at_the_2022_Goodwood_Festival_of_Speed.jpg', 'The Mercedes-AMG ONE (R50, previously known as Project One) is a limited-production plug-in hybrid sports car manufactured by Mercedes-AMG, featuring Formula One-derived technology', 'Engine	1.6 L (98 cu in) Mercedes-Benz PU106B Hybrid E-turbo V6\r\nElectric motor	\r\n1 MGU-H turbocharger\r\n1 MGU-K E-motor\r\n2 front-axle E-motors\r\nPower output	\r\n422 kW (574 PS; 566 hp) (engine)\r\n90 kW (122 PS; 121 hp) (MGU-H turbocharger)\r\n120 kW (163 PS; 161 hp) (MGU-K electric motor)\r\n240 kW (326 PS; 322 hp) (front axle electric motors)\r\n782 kW (1,063 PS; 1,049 hp) (combined output)\r\nTransmission	7'),
+(19, 'Mercedes', 'AMG-GT', 135000, 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg/420px-Festival_automobile_international_2015_-_Mercedes_AMG_GT_-_003.jpg', 'The Mercedes-AMG GT (C190 / R190) is a grand tourer produced in coupé and roadster bodystyles by German automobile manufacturer Mercedes-AMG. The car was introduced on 9 September 2014 and was officia', 'Engine	4.0 L M178 (Mercedes-AMG) twin-turbocharged V8\r\n6.2 L M159 DOHC V8 (AMG GT3)\r\nTransmission	7-speed AMG SPEEDSHIFT DCT dual-clutch'),
+(20, 'Mercedes', 'Benz AMG GT', 93550, 'https://media.ed.edmunds-media.com/mercedes-benz/amg-gt/2023/oem/2023_mercedes-benz_amg-gt_sedan_53_fq_oem_1_815.jpg', 'There\'s a lot to like with the Mercedes-AMG GT 53 sedan. It\'s sporty, offers lots of trunk space, and is available with some of the best in-car tech and driver aids around.', '3.0L inline-6 turbo engine with EQ Boost\r\nEngine\r\n362 hp @ 5,500-6,100 rpm\r\nPower\r\nAMG SPEEDSHIFT® TCT 9-speed\r\nAutomatic transmission'),
+(21, 'Mercedes', 'AMG-SL', 80000, 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/2022_Mercedes-AMG_SL_55.jpg/420px-2022_Mercedes-AMG_SL_55.jpg', 'The Mercedes-AMG SL (model code R232) is the seventh-generation of the Mercedes-Benz SL-Class roadster,', 'Engine	\r\n2.0 L M139 mild hybrid turbo (EQ Boost) I4\r\n4.0 L M177 biturbo V8\r\nTransmission	Mercedes-AMG Speedshift MCT 9G 9-speed automatic'),
+(22, 'Mercedes', 'GT BS', 325000, 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/2021_Mercedes-AMG_GT_Black_Series.jpg/330px-2021_Mercedes-AMG_GT_Black_Series.jpg', 'The GT Black Series is a high-performance variant of the Mercedes-AMG GT and was officially revealed on Mercedes-AMG\'s YouTube channel on 9 July 2020. The M178 engine in this variant is tuned to an ou', 'Engine Type\r\nHandcrafted AMG 4.0-Liter V8 Biturbo engine with flat-plane crankshaft (M178 LS2)\r\nTransmission Type AMG 7-Speed DCT Dual-Clutch'),
+(23, 'Nissan', 'Skyline', 31064, 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/The_frontview_of_Nissan_DAA-HV37_SKYLINE_HYBRID_GT_Type_SP_%28cropped%29.jpg/420px-The_frontview_of_Nissan_DAA-HV37_SKYLINE_HYBRID_GT_Type_SP_%28cropped%29.jpg', 'The Nissan Skyline (Japanese: 日産・スカイライン, Hepburn: Nissan Sukairain) is a brand of automobile originally produced by the Prince Motor Company starting in 1957, and then by Nissan after the two companie', 'Engine	Gasoline:2.0 L Mercedes-Benz M274 I4\r\nElectric motor	HM34 (3.5 L models only)\r\nTransmission	7-speed automatic\r\nHybrid drivetrain	Intelligent Dual Clutch Control'),
+(24, 'Nissan', 'RZ34', 40000, 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Nissan_FAIRLADY_Z_%28Z34%29_Version_ST%2C_2022%2C_left-front.jpg/420px-Nissan_FAIRLADY_Z_%28Z34%29_Version_ST%2C_2022%2C_left-front.jpg', 'The seventh-generation Nissan Z was first hinted at in 2018, when Alfonso Albaisa, senior vice president for global design at Nissan, confirmed to Australian automotive magazine WhichCar that a succes', 'Horsepower\r\n400 HP\r\ntwin-turbo V6 engine\r\nTorque\r\n350 LB-FT\r\nmassive low-end power\r\nTransmissions\r\n6 -SPEED MANUAL\r\nor 9-speed automatic'),
+(25, 'Nissan', 'GTR35 2023', 113540, 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/2024_Nissan_GT-R_Premium_edition_T-Spec.jpg/330px-2024_Nissan_GT-R_Premium_edition_T-Spec.jpg', 'In 2023, for the 2024 model year, the GT-R was facelifted. The new version was introduced at the 2023 Tokyo Auto Salon. ', 'Transmission\r\n6 -speed\r\nDual-clutch transmission\r\nHorsepower\r\n565 hp\r\n@ 6,800 rpm \r\n[*]\r\nTorque\r\n467 lb-ft\r\n@ 3,600–5,600 rpm \r\n[*]'),
+(26, 'Nissan', 'GTR50', 1000000, 'https://th.bing.com/th/id/OIP.DRyJphEH084XdbM0W6ASNwHaEK?pid=ImgDet&rs=1', 'o celebrate the 50th anniversary of the GT-R, Nissan announced in 2019, that they will introduce a limited-production GT-R called the GT-R50. Only 50 cars were expected to be produced. The GT-R50 shar', 'ngine type	V6 Twin Turbo\r\nDisplacement	3.8 l (232 ci)\r\nPower	720 ps (710 bhp / 529 kw)\r\nTorque	780 Nm (575 lb-ft)\r\nPower / liter	189 ps (187 hp)\r\nPower / weight	423 ps (418 bhp) / t\r\nTorque / weight	459 Nm (338 lb-ft) / t\r\nTransmission	6 speed automatic'),
+(27, 'Nissan', 'GTR34', 100000, 'https://th.bing.com/th/id/R.da2a570358d1531dfef20a41d030acf9?rik=JzQz2eiXXvcaUg&pid=ImgRaw&r=0', 'It is fking skyline!!!!! stu!!!', 'Engine type	Inline 6, Twin Turbo, 24v\r\nDisplacement	2.6 l (159 ci)\r\nPower	280 ps (276 bhp / 206 kw)'),
+(28, 'Mitsubishi', 'GTO', 30000, 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Mitsubishi_3000GT_--_03-21-2012.JPG/420px-Mitsubishi_3000GT_--_03-21-2012.JPG', 'The Mitsubishi GTO is a front-engine, all-wheel/front-wheel drive grand touring/sports car manufactured and marketed by Mitsubishi from 1990 until 2000 over three different generations. Manufactured i', 'Engine	3.0 L 6G72 SOHC V6\r\nTransmission	4-speed automatic'),
+(29, 'Mitsubushi', 'Eclipse', 34200, 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mitsubishi_Eclipse_front_20080801.jpg/420px-Mitsubishi_Eclipse_front_20080801.jpg', 'The Mitsubishi Eclipse is a sport compact car that was produced by Mitsubishi in four generations from 1989 until 2011. A convertible body style was added during the 1996 model year.', 'Engine	2.0 L 140 hp (104 kW) 420A I4\r\nTransmission	4-speed automatic'),
+(30, 'Mitsubishi', 'Triton', 60280, 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/2019_Mitsubishi_L200_Warrior_DI-D_2.3_Front.jpg/420px-2019_Mitsubishi_L200_Warrior_DI-D_2.3_Front.jpg', 'The Mitsubishi Triton is a compact pickup truck produced by Mitsubishi Motors. In Japan, where it has only been sold intermittently and in small numbers, it was originally known as the Mitsubishi Fort', 'N/A'),
+(31, 'Mitsubishi', 'EvoX', 49000, 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/2017-04-02_Mitsubishi_Lancer_Evolution_X_MR_SST_14_%282%29.jpg/420px-2017-04-02_Mitsubishi_Lancer_Evolution_X_MR_SST_14_%282%29.jpg', 'The Mitsubishi Lancer Evolution, popularly referred to as the \'Evo\', is a sports sedan and rally car based on the Lancer that was manufactured by Japanese manufacturer Mitsubishi Motors from 1992 ', 'Engine	2.0 L I4 turbo\r\nTransmission	4-speed automatic'),
+(32, 'Ford', 'Ford GT', 500000, 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/2018_Ford_GT.jpg/420px-2018_Ford_GT.jpg', 'At the 2015 North American International Auto Show and at the unveiling of the 2015 racing video game Forza Motorsport 6, the second-generation Ford GT was shown to the public with plans for production in 2016, after a decade-old hiatus from the first generation.', 'Engine	3.5 L twin-turbocharged Ford EcoBoost V6\r\nPower output	\r\n647–660 hp (482–492 kW) (GT)\r\n700 hp (522 kW) (GT Mk II)\r\nTransmission	7-speed Getrag 7DCL750 (PowerShift) dual-clutch'),
+(33, 'Ford', '2018 Ford Mustang GT 5.0', 63984, 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/2018_Ford_Mustang_GT_5.0.jpg/420px-2018_Ford_Mustang_GT_5.0.jpg', 'The Ford Mustang is a series of American automobiles manufactured by Ford. In continuous production since 1964, the Mustang is currently the longest-produced Ford car nameplate. Currently in its sixth generation, it is the fifth-best selling Ford car nameplate. ', 'Engine Type	V-8 5.0L\r\nCylinders	8 cylinders\r\nTransmission Type	6-speed Automatic'),
+(34, 'Ford', '2024 Mustang', 30000, 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Seventh_generation_2024_Ford_Mustang.jpg/420px-Seventh_generation_2024_Ford_Mustang.jpg', 'Ford introduced the seventh-generation Mustang at the 2022 Detroit Auto Show on September 14, in a special event called \"The Stampede\"', 'Engine	\r\n2.3 L EcoBoost I4'),
+(35, 'Ford', 'Mustang Mach E', 63995, 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/2021_Ford_Mustang_Mach-E_Standard_Range_Front.jpg/420px-2021_Ford_Mustang_Mach-E_Standard_Range_Front.jpg', 'The Ford Mustang Mach-E is a battery electric compact crossover SUV produced by Ford.[9] The vehicle was introduced on November 17, 2019, and went on sale in December 2020 as a 2021 model', 'Electric motor	Permanent magnet synchronous motor'),
+(36, 'Ford', 'Evos', 35000, 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Ford_Evos_001_%28cropped%29.jpg/420px-Ford_Evos_001_%28cropped%29.jpg', 'Developed largely by a China-based team of Ford, the Evos has been described as a mix between a crossover and a fastback or station wagon due to its low-slung proportion', 'N/A'),
+(37, 'Mazda', 'MX5', 34980, 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Mazda_Roadster_%28MX-5%29_by_Negawa_Bridge_%28cropped%29.jpg/420px-Mazda_Roadster_%28MX-5%29_by_Negawa_Bridge_%28cropped%29.jpg', 'The fourth-generation Mazda MX-5 was unveiled in 2014 and has been in production since 2015. An updated model was introduced in 2019 and is visually identical to the pre-update model; the engine was upgraded to 135 kW (181 hp) and a dual-mass flywheel introduced to the powertrain in the manual transmission. ', 'Engine Type and Required FuelPremium Unleaded I-4 Transmission  Manual 6 speed 181 hp'),
+(38, 'Mazda', 'BT50', 47490, 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/2021_Mazda_BT-50_Hi-Racer_Double-Cab_1.9_SP.jpg/420px-2021_Mazda_BT-50_Hi-Racer_Double-Cab_1.9_SP.jpg', 'The third generation BT-50 was unveiled in Australia on 17 June 2020.', 'Engine	1.9 L RZ4E-TC GEN2 I4-T (diesel)\r\nTransmission	6-speed Aisin AE6 manual'),
+(39, 'Mazda', 'RX-8', 12540, 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Mazda_RX-8_SPIRIT_R_%28SE3P%29_front.JPG/420px-Mazda_RX-8_SPIRIT_R_%28SE3P%29_front.JPG', 'The Mazda RX-8 is a sports car manufactured by Japanese automobile manufacturer Mazda between 2002 and 2012. It was first shown in 2001 at the North American International Auto Show. It is the successor to the RX-7', 'Engine	1.3  L RENESIS twin-rotor\r\nTransmission	5-speed manual'),
+(40, 'Mazda', 'RX-7', 11770, 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Tuned_Mazda_RX-7_Type_RB_%28GF-FD3S%29_front.jpg/420px-Tuned_Mazda_RX-7_Type_RB_%28GF-FD3S%29_front.jpg', 'The Mazda RX-7 is a front-engine, rear-wheel-drive, rotary engine-powered sports car that was manufactured and marketed by Mazda from 1978 until 2002 across three generations, all of which made use of a compact, lightweight Wankel rotary engine.', 'N/A'),
+(41, 'Mazda', 'CX-50', 26800, 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/2023_Mazda_CX-50_GT_in_Zircon_Sand_Metallic%2C_Front_Left%2C_06-18-2022.jpg/420px-2023_Mazda_CX-50_GT_in_Zircon_Sand_Metallic%2C_Front_Left%2C_06-18-2022.jpg', 'The Mazda CX-50 is a compact crossover SUV produced by the Japanese automobile manufacturer Mazda since 2022 for the North American and Chinese market.', 'N/A'),
+(42, 'Porsche', '911', 27990, 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Porsche_911_No_1000000%2C_70_Years_Porsche_Sports_Car%2C_Berlin_%281X7A3888%29.jpg/420px-Porsche_911_No_1000000%2C_70_Years_Porsche_Sports_Car%2C_Berlin_%281X7A3888%29.jpg', 'The Porsche 911 (pronounced Nine Eleven or in German: Neunelfer) is a two-door 2+2 high performance rear-engined sports car introduced in September 1964 by Porsche AG of Stuttgart, Germany. It has a rear-mounted flat-six engine and originally a torsion bar suspension. ', 'N/A'),
+(43, 'Porsche', 'Boxster', 60950, 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Porsche_718_Boxster_Spyder_IMG_2961.jpg/420px-Porsche_718_Boxster_Spyder_IMG_2961.jpg', 'The Porsche Boxster and Cayman are mid-engine two-seater sports cars manufactured and marketed by German automobile manufacturer Porsche across four generations—as a two-door, two-seater roadster (Boxster) and a three-door, two-seater fastback coupé (Cayman).', 'N/A'),
+(44, 'Porsche', 'Taycan', 86700, 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/2020_Porsche_Taycan_4S_79kWh_Front.jpg/420px-2020_Porsche_Taycan_4S_79kWh_Front.jpg', 'The Porsche Taycan is a battery electric saloon and shooting brake produced by German automobile manufacturer Porsche. The concept version of the Taycan, named the Porsche Mission E, debuted at the 2015 Frankfurt Motor Show.[', 'Engine	2× AC synchronous electric motors\r\nTransmission 1-speed direct-drive '),
+(45, 'Porsche', 'Panamera', 88400, 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/JAIA18_Porsche_Panamera_4_E-Hybrid_97ABE1_1.jpg/420px-JAIA18_Porsche_Panamera_4_E-Hybrid_97ABE1_1.jpg', 'he second generation Panamera was revealed on 28 June 2016 at a special event in Berlin, Germany. Codenamed 971,', 'Engine  4.0 L EA825TT twin-turbocharged\r\nElectric motor	100 kW (136 PS; 134 hp)\r\nTransmission	8-speed PDK dual clutch'),
+(46, 'Porsche', 'Macan', 68400, 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/2022_Porsche_Macan_GTS_Auto_Zuerich_2021_IMG_0044.jpg/300px-2022_Porsche_Macan_GTS_Auto_Zuerich_2021_IMG_0044.jpg', 'The Porsche Macan (Type 95B) is a high-performance compact luxury crossover SUV produced by the German car manufacturer Porsche from 2014', 'Engine	2.0-litre Volkswagen AG EA888\r\nTransmission	7-speed PDK'),
+(47, 'Lexus', 'LC 500', 93050, 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Lexus_LC500_at_races_%282%29.jpg/420px-Lexus_LC500_at_races_%282%29.jpg', 'The Lexus LC (レクサス・LC, Rekusasu LC) is a grand tourer manufactured by Lexus, Toyota\'s luxury division. Based on the 2012 LF-LC Concept', 'Engine Petrol hybrid 3.5 L 8GR-FXS V6 \r\nElectric motor	132 kW (177 hp; 179 PS\r\nTransmission	10-speed Direct Shift Aisin'),
+(48, 'Lexus', 'RC 300h', 42305, 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/DSC06569-Lexus_RC.jpg/420px-DSC06569-Lexus_RC.jpg', 'The Lexus RC (Japanese: レクサス・RC, Rekusasu RC) is a compact executive two-door coupé manufactured by Lexus, Toyota\'s luxury division.', 'Engine	2.0 L 8AR-FTS I4-T\r\nElectric motor	105 kW (141 hp; 143 PS)\r\nTransmission	8-speed automatic'),
+(49, 'Lexus', 'LFA', 375000, 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Lexus_LFA_%2849944546063%29.jpg/420px-Lexus_LFA_%2849944546063%29.jpg', 'The Lexus LFA (Japanese: レクサス・LFA, Rekusasu LFA) is a two-seat sports car manufactured by Lexus, the luxury car division of Toyota.', 'Engine	4.8 L 1LR-GUE even-firing V10\r\nTransmission6-speed Aisin SA6 automated manual'),
+(50, 'McLaren', '650S', 90000, 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/The_frontview_of_McLaren_650S_Coup%C3%A9.JPG/420px-The_frontview_of_McLaren_650S_Coup%C3%A9.JPG', 'N/A', 'N/A'),
+(56, 'TOYOTA', 'Skyline', 999999, 'https://cdn.motor1.com/images/mgl/2NNoXE/s3/nissan-skyline-gt-r-reimagined-by-artist-for-modern-times-front-angle.jpg', '', '');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `car_db`
+--
+ALTER TABLE `car_db`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `car_db`
+--
+ALTER TABLE `car_db`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
